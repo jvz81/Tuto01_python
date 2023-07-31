@@ -31,8 +31,13 @@ class Producto:
     def __str__(self):
         return 'Codigo: ' + str(self.__codigo) + ', nombre: ' + self.__nombre + ', precio: ' + str(self.__precio)
 
+    def calcular_total(self, unidades):
+        return self.__precio*unidades
+
 p1 = Producto(1, "Producto 1", 10)
 p2 = Producto(2, "Producto 2", 15)
 p3 = Producto(3, "Producto 3", 30)
 
-print(p1)
+print(p1.calcular_total(5))
+print(p2.calcular_total(10))
+print(p3.calcular_total(4))
